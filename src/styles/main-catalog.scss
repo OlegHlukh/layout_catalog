@@ -1,14 +1,13 @@
 .main_catalog {
   margin-top: 30px;
-  @include flex($horizontal: center);
-  flex-wrap: wrap;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(4, 200px);
+  gap: 50px 50px;
   padding: 0 5px 50px;
   width: 100%;
   max-width: 1024px;
 
-  .product--catalog {
-    margin: 0 24px 50px;
-  }
 }
 
 .main__page {

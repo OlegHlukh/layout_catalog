@@ -1,6 +1,8 @@
 .nav {
   &__link {
-    @include flex($vertical: center);
+    display: grid;
+    justify-content: space-between;
+    align-items: center;
     min-height: 60px;
     text-align: center;
     color: #000;
@@ -8,7 +10,7 @@
     position: relative;
     padding: 23px, 0;
     text-transform: uppercase;
-    transition: color 0.5s;
+    transition: color 300ms;
 
     &:hover {
       color: $colorLightBlue;
@@ -16,11 +18,12 @@
   }
 
   &__list {
-    @include flex();
+    display: grid;
+    grid-template-columns: repeat(9, auto);
+    justify-content: flex-end;
   }
 
   &__items {
-    @include flex();
     margin-right: 20px;
     height: 100%;
   }
