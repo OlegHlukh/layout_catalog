@@ -1,9 +1,3 @@
-@mixin flex($vertical: null, $horizontal: null) {
-  display: flex;
-  align-items: $vertical;
-  justify-content: $horizontal;
-}
-
 @mixin font(
   $font-family: $fontFamily,
   $font-size: null,
