@@ -3,15 +3,21 @@
   grid-template-columns: repeat(5, 15px);
 
   &__star {
-    background-image: url(../images/star.svg);
     width: $starSize;
     height: $starSize;
     background-repeat: no-repeat;
     background-position: center;
     margin-right: 4px;
+    background-image: url(../images/star.svg);
   }
 
-  .stars--active {
-    background-image: url("../images/star-active.svg");
+  &--1 &__star:first-child,
+  &--2 &__star:nth-child(-n+2),
+  &--3 &__star:nth-child(-n+3),
+  &--4 &__star:nth-child(-n+4),
+  &--5 &__star:nth-child(-n+5) {
+    background-image: url(../images/star-active.svg);
+    background-repeat: no-repeat;
+    background-position: center;
   }
 }
